@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>个人主页</title>
+        <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+        <meta name="author" content="Vincent Garreau">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" media="screen" href="/static/css/style.css">
+        <link rel="stylesheet" href="/static/css/master.css">
+        <link rel="stylesheet" href="/static/css/h5.css" media="only screen and (max-width:480px)">
+        <style id="5c6b3c12-7bb1-496c-99e2-36cb315e59bc">
+            #nong-drive-anytime-icon {
+                position: fixed;
+                z-index: 6969;
+                color: white;
+                border-radius: 32px;
+                width: 32px;
+                height: 32px;
+                left: 10px;
+                bottom: 15px;
+                opacity: 0.1;
+                text-align: center;
+                line-height: 32px;
+                -webkit-transition: opacity 0.6s ease-in-out;
+                -moz-transition: opacity 1s ease-in-out;
+                -o-transition: opacity 1s ease-in-out;
+                transition: opacity 1s ease-in-out;
+                background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAAB3RJTUUH3gwKEBo6JKpagwAAA/lJREFUWMPtlk1oXFUUgL/z3ps3mUlmJmli0iZ26E9KSAuWqtSdQkQoKKIUXfi3KlhUkJKdaEREurHFjTttcaHUgiD+oJCdtIq01kpBS5Mmtvkh6cwkmc5fkjdzj4uXKc1kppOOEQQ          9q3vfO/ee755z7jkX/usi9RQee+7QujYa/uyjjQWoYrgZiAEOoEAGSK+MGwapClBhfAfwIjAAdAMuYIAkcAE4CZwHi          o1ArAE48NJhjDGYUskVkUPAEaAXVVTVX6GACCLCCsgp4F3gxt1COJXGAWzbdkXkbVMqHUE1hGURjLYRbt9MsLUdL58          ln5xhaSGJKXodiLwGbAdeBqYaDkEZAHgFeF+NCVnBED37H+We3Q/gtsQQxwFj8Ao50tdHmDjzHfnENPje+AR4Fcit1          wt2FeM7gQ9R7XLDLfQdeIau+x8mEI4gloWIIJaFHQzR0nkv0a07yEz/iZdNg0gfcBG4DDB26UJdAKvKtxeAXiyL+P5          H2NJ/H65lQM1qLVVUDS2b42wfeBon3AKqIeAwEFlvCCoBmoEBVGmKxOjq3+uflhIBKVa9MmoM0fguIt3b/CSFfUC8U          YAY0K2qhNs7CUZi5U1xxNSEsJ0AsfguxLIAokBPowAO4CIQim1CbGf1z1oQIjS1diC2Xd6j4RAoYFDw8jnUmDULqkI          oeIUc+PoGWGwUIAMkESGXmqVYyJWv1x0hjCmSmbyKKZUA8sBsowBp4IKIUFiYY35iDKnRLm5BiFBI3SA9cbVcGceBa          38nBCeBpCl6jJ8dJjM7WU6uNRKwgMU013/4mqV0CkQM8DGQaBQA/MZyChFyiRl+//ZzUmOXMaXirSIkYqGqZJMzjH5          /mrmRS34o4GzCcU/vLmR5Z+rKugBqleJO4ATwuKrihpuJbonTFt9JU+smioU8C5PjLEyOs5ieB2Apn2NPYvqrN5bSn          4rIN8bPBXp+OtcQAPh3+T3gWVRDquqf3rJBjZ9wfkdUA2f2Jafmnl/KPNlRyC+q6gf43bFQD8K+fTL623l69z5Ynma          AYeAiIm0iEgVs/MJUFJGMiPwBHE2IPXRCs9loMPiEIiHjLT8EBIAfgeLg1h6OT07X90ANT4BfWOIrXong3/NZ4BpoY          k/JY2hxLmzgTVQHvVzW9TKZZVSP1fPEHd+EVUCqytFCim3GAwgBb6E6WMznXO/mzWWtA1H3UbpemT/4VHnoQ8BgMZe          tC2HdnZna0vbFl+VhYcXYMae5ZTkQjbliWYPAEBCuXLdhALUhmpcD0agrlnUQ1TVdckMBakAcd8LhkUAk+nrq119GK          /U3LAcq5bacCAM9sb7+0eS5n9XLZlblwD8GUAFRzUP/y79D/gKteao6M/AMZwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjA          xNi0wOS0xN1QxNToyMToyNiswODowMH9bMZYAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTQtMTItMTBUMTY6MjY6NTgrM          Dg6MDAX0x1GAAAATXRFWHRzb2Z0d2FyZQBJbWFnZU1hZ2ljayA3LjAuMS02IFExNiB4ODZfNjQgMjAxNi0wOS0xNyB          odHRwOi8vd3d3LmltYWdlbWFnaWNrLm9yZ93ZpU4AAAAYdEVYdFRodW1iOjpEb2N1bWVudDo6UGFnZXMAMaf/uy8AA          AAYdEVYdFRodW1iOjpJbWFnZTo6SGVpZ2h0ADEyOEN8QYAAAAAXdEVYdFRodW1iOjpJbWFnZTo6V2lkdGgAMTI40I0          R3QAAABl0RVh0VGh1bWI6Ok1pbWV0eXBlAGltYWdlL3BuZz+yVk4AAAAXdEVYdFRodW1iOjpNVGltZQAxNDE4MjAwM          DE4ibQBZAAAABJ0RVh0VGh1bWI6OlNpemUAMi4zM0tCSV84/gAAAF90RVh0VGh1bWI6OlVSSQBmaWxlOi8vL2hvbWU          vd3d3cm9vdC9zaXRlL3d3dy5lYXN5aWNvbi5uZXQvY2RuLWltZy5lYXN5aWNvbi5jbi9zcmMvMTE4MjEvMTE4MjE5M          S5wbmd8fDQnAAAAAElFTkSuQmCC");
+            }
+
+            #nong-drive-anytime-dialog {
+                position: fixed;
+                left: 8%;
+                top: 10%;
+                z-index: 69699;
+                border-radius: 8px 8px;
+                padding-top: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
+                background-color: rgba(237, 237, 237, 0.8);
+            }
+
+            #nong-drive-anytime-dialog > span {
+                margin-left: 40px;
+            }
+
+            #nong-drive-anytime-dialog #nong-move {
+                width: 16px;
+                height: 16px;
+                display: none;
+                background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfeChoLIiwIy72HAAAA3ElEQVQoz3XRsUrDYBQF4C9NVnFRB8fiLFhEcJAOHRJw6FApdLBv4EP4An0QQeyatZMdsjiok+DiA7jEJcShaZs0eob/Hg6H+99        7bqiJqVMv/kViaSmuS2GN91179upM7rNtCJyb2/PtyYn33eZBVScmTaVTNR+15hnprw2JoaySC0XFMkMJkVt3Hly4ROE        KgRCFL/cOI5Qo/3g3iM10Kz42rljXTEyEVK7nY2ftnrnFysBis+YWj6tP6kHd+HGslBt4W89Qj/rAVMe+gWwbdRNx+1h        Rw5A6QlqXfgFuOzSValRoagAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNi0wOS0xN1QxNToyMToxNyswODowMFejPcEAAAA        ldEVYdGRhdGU6bW9kaWZ5ADIwMTQtMTAtMjZUMTE6MzQ6NDQrMDg6MDDQbkqYAAAATXRFWHRzb2Z0d2FyZQBJbWFnZU1        hZ2ljayA3LjAuMS02IFExNiB4ODZfNjQgMjAxNi0wOS0xNyBodHRwOi8vd3d3LmltYWdlbWFnaWNrLm9yZ93ZpU4AAAA        YdEVYdFRodW1iOjpEb2N1bWVudDo6UGFnZXMAMaf/uy8AAAAYdEVYdFRodW1iOjpJbWFnZTo6SGVpZ2h0ADUxMo+NU4E        AAAAXdEVYdFRodW1iOjpJbWFnZTo6V2lkdGgANTEyHHwD3AAAABl0RVh0VGh1bWI6Ok1pbWV0eXBlAGltYWdlL3BuZz+        yVk4AAAAXdEVYdFRodW1iOjpNVGltZQAxNDE0Mjk0NDg0ExvBiAAAABJ0RVh0VGh1bWI6OlNpemUAMTUuMktCe0oJtgA        AAF90RVh0VGh1bWI6OlVSSQBmaWxlOi8vL2hvbWUvd3d3cm9vdC9zaXRlL3d3dy5lYXN5aWNvbi5uZXQvY2RuLWltZy5lYXN5aWNvbi5jbi9zcmMvMTE3NzQvMTE3NzQ3Ni5wbmf8M3m2AAAAAElFTkSuQmCC");
+                display: none;
+                float: right;
+                opacity: 0.4;
+                cursor: pointer;
+            }
+
+            #nong-drive-anytime-dialog > button {
+                margin-left: 12px;
+            }
+
+            #nong-drive-anytime-dialog > table {
+            }
+
+            #nong-table-wrapper {
+                overflow-x: hidden;
+                overflow-y: auto;
+                position: relative;
+                max-height: 30em;
+            }
+
+            #nong-drive-anytime-icon:hover {
+                opacity: 1;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- particles.js container -->
+        <div id="particles-js">
+            <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1920" height="853"></canvas>
+        </div>
+
+        <div class="header">
+            <div class="nav">
+                <ul>
+                    <a class="nav-a highlight" href="#">
+                        <li id="nav-0" data-nav="0" class="nav-li">首页</li>
+                    </a>
+                    <a class="nav-a" href="#">
+                        <li id="nav-1" data-nav="1" class="nav-li">音乐</li>
+                    </a>
+                    <a class="nav-a" href="#">
+                        <li id="nav-2" data-nav="2" class="nav-li">图片</li>
+                    </a>
+                    <a class="nav-a" href="#">
+                        <li id="nav-3" data-nav="3" class="nav-li">清单</li>
+                    </a>
+                    <line style="transform: translateX(0rem);"></line>
+                </ul>
+            </div>
+        </div>
+        <div class="content" data-page="0" style="transform: translateY(0vh);">
+            <div id="a-0" class="page-mian page">
+                <div class="main-content" data-article="3" data-sections="2">
+                    <div class="allSection vertical-center" data-active="0" style="transform: translate(-200vw, -50%);">
+                        <div id="section-0" class="section">
+                            <div class="photo-0">
+                            </div>
+                            <div class="baoTitle main-one">
+                                <h1 class="main-title write">RAGE THE DREAM</h1>
+                                <h1 class="main-font write-1 fontfamily-0">Hello，I am taka.Welcome to my page.</h1>
+                            </div>
+
+                        </div>
+                        <div id="section-1" class="section ">
+                            <div class="photo-1">
+                            </div>
+                            <div class="baoTitle me">
+                                <h1 class="main-title me-1">About me</h1>
+                                <h1 class="main-article me-2 fontfamily-1">
+
+                                    勤快、高效的90后<br>
+                                    Web 前端开发工程师 <br>
+                                    热爱编程 喜欢JavaScript <br>
+                                    假如生活欺骗了你，不要悲伤不要心急。<br>
+                                    《代码大全》会一直陪伴着你☺ ...<br>
+                                </h1>
+                            </div>
+                        </div>
+                        <div id="section-2" class="section ">
+                            <div class="photo-2">
+                            </div>
+                            <div class="baoTitle  main-one">
+                                <h1 class="main-title">随时准备出发。</h1>
+                                <h1 class="main-font fontfamily-0">Be ready at any time.</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <span class="prev">＜</span>
+                        <span class="next">＞</span>
+                    </div>
+                    <div class="tiao">
+                        <div data-index="0" id="dian-0" class="dian">
+                        </div>
+                        <div data-index="1" id="dian-1" class="dian">
+                        </div>
+                        <div data-index="2" id="dian-2" class="dian active">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="a-1" class="page-about page">
+                <div class="photo-4">
+                </div>
+                <div class="about-content vertical-center-1">
+                    <div class="about-article">
+                        <img class="about-music vertical-center" src="/static/img/music6.gif" alt="">
+                    </div>
+                    <div class="music-introduce vertical-center shadow notShow">
+                        <div class="introduce-title">
+                            Music Player
+                        </div>
+                        <div class="introduce-article color">
+                            JS : ES6 模板字符串等新特性 写出健壮的代码 <br>
+                            HTML5 : audio标签<br>
+                            CSS3： translate、animation等新特性<br>
+                            运用高斯模糊渲染播放器背景<br>
+                            功能 : 播放、暂停、切换音乐、更改音乐进度、循环播放、查看播放列表、收藏<br>
+                        </div>
+                    </div>
+                    <span class="music-button">Read More</span>
+                </div>
+            </div>
+            <div id="a-2" class="page-work page">
+                <div class="photo-introduce vertical-center shadow-1 notShow">
+                    <div class="photo-title">
+                        Banner
+                    </div>
+                    <div class="photo-article color-2">
+                        运用原生JavaScript，基于CSS3新特性实现网页 轮播图 构件 <br>
+                    </div>
+                </div>
+                <div class="banner">
+                    <img class="work-photo vertical-center" src="/static/img/banner.gif" alt="">
+                </div>
+                <span class="banner-button">Read More</span>
+            </div>
+            <div id="a-3" class="page-content page">
+                <!-- <div class="content-article vertical-center">
+                    More projects are on the way ...
+                </div> -->
+                <!-- themes -->
+                <div class="themes">
+                    <div class="center" data-all="3" data-theme="2">
+                        <div class="theme">
+                            <span id="theme-0" class="theme-color slider-active" style="background: rgba(118, 195, 221, 0.73);"></span>
+                            <span id="theme-1" class="theme-color"></span>
+                            <span id="theme-2" class="theme-color"></span>
+                        </div>
+                        <div class="theme-article">
+                            <h1 class="todo">TODO</h1>
+                            <h3 class="todo-font">多主题</h3>
+                            <p class="todo-font-1">管理任务也要赏心悦目。</p>
+                        </div>
+                        <div class="unslider">
+                            <div class="allAircle">
+                                <span id="circle-0" data-index="0" class="circle"></span>
+                                <span id="circle-1" data-index="1" class="circle"></span>
+                                <span id="circle-2" data-index="2" class="circle"></span>
+                            </div>
+                            <div class="slider">
+                                <div class="bg-imgs">
+                                    <img class=" phone" src="/static/img/phone.jpg">
+                                </div>
+                                <div class="theme-photo">
+                                <span class="black-photo img slider-active">
+                                    <img id="img-0" class="lazy" src="/static/img/2.png">
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /themes -->
+            </div>
+        </div>
+        <div class="footer">
+            <div class="nextPage">
+                ︾
+            </div>
+        </div>
+
+        <!-- particles -->
+        <script src="/static/js/particles.js"></script>
+        <script src="/static/js/app.js"></script>
+        <script src="/static/js/stats.js"></script>
+
+        <script src="/static/js/master.js"></script>
+        <div id="nong-drive-anytime-icon"></div>
+    </body>
+</html>

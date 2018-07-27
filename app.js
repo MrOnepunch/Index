@@ -33,6 +33,6 @@ const run = (port=3000, host='') => {
 
 if (require.main === module) {
     const port = 5000
-    const host = '0.0.0.0'
+    const host = '127.0.0.1'
     run(port, host)
 }
